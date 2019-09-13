@@ -1,0 +1,262 @@
+
+
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../fonts/poppins/Poppinsregular.woff2') format('woff2'),
+    url('../fonts/poppins/Poppinsregular.woff') format('woff'),
+    url('../fonts/poppins/Poppinsregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../fonts/poppins/Poppinspoppins-semiboldmedium.woff2') format('woff2'),
+    url('../fonts/poppins/Poppinspoppins-semiboldmedium.woff') format('woff'),
+    url('../fonts/poppins/Poppinspoppins-semiboldmedium.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+*, :before, :after{
+  box-sizing: border-box;
+}
+
+body{
+  min-width: 320px;
+  color: rgba(97, 97, 97, 1);
+  font-family: 'PoppinsRegular', sans-serif;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: rgba(49, 49, 49, 1);
+}
+
+h1{
+  font-family: "LibreBaskerville", sans-serif;
+  font-size: calc(25px + 2.73vw); /*60px*/
+  margin-bottom: calc(20px + 2.34vw); /*50px*/
+}
+
+h2{
+  font-family: "LibreBaskervilleBold", sans-serif;
+  font-size: calc(20px + 2.34vw); /*50px*/
+  margin-bottom: calc(20px + 2.34vw); /*50px*/
+}
+
+h3{
+  font-weight: 600;
+  font-size: calc(15px + 1.17vw); /*30px*/
+  margin-bottom: 10px;
+}
+
+h4{
+  font-weight: 600;
+  font-size: calc(15px + .38vw); /*25px*/
+  margin-bottom: calc(10px) /*40px*/
+}
+
+h5{
+  font-family: "PoppinsMedium", sans-serif;
+  font-size: calc(15px + .39vw); /*20px*/
+  margin-bottom: calc(15px + 1.95vw) /*40px*/
+}
+
+h6{
+  font-weight: 600;
+  font-size: calc(15px + .23px); /*18px*/
+  margin-bottom: 15px;
+}
+.headline h2 span{
+  position: relative;
+  z-index: 2;
+}
+
+.headline h2:after{
+  content: attr(data-count);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: rgba(246, 246, 246, 1);
+  font-size: calc(50px + 17.18vw);
+  font-family: 'PoppinsMedium';
+}
+
+.headline_section{
+  text-align: center;
+  margin-bottom: calc(20px + 4.68vw);
+}
+
+.headline_section .headline h2:after{
+  right: 0;
+  color: rgba(240, 240, 240, 1);
+}
+
+.fix_headline{
+  position: relative;
+}
+
+p{
+  margin-bottom: calc(15px + 1.95vw); /*40px*/
+}
+
+a {
+  color: rgba(58,58,58,1)
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.container{
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.block{
+  padding-top: calc(30px + 9.37vw); /*150px*/
+  padding-bottom: calc(30px + 9.37vw); /*150px*/
+}
+
+
+.header{
+  position: relative;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+}
+
+.header.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 75px;
+}
+
+.header_logo {
+  font-size: 25px;
+}
+
+.menu__wrapper{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu_item:not(:last-child){
+  margin-right: calc(15px + .78vw);
+}
+
+.menu_link{
+  color: rgba(39, 39, 39, 1);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'PoppinsMedium', sans-serif;
+}
+
+
+.main{
+  background-color: rgba(247, 247, 247, 1);
+}
+
+.main__wrapper{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.main__item{
+  text-align: center;
+  min-width: 250px;
+  flex: 1 1;
+  margin: 0 15px 15px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: calc(15px + 3.51vw) calc(10px + 1.56vw);
+  transition: all .5s;
+}
+
+.main__item:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+}
+
+
+
+
+label {
+  vertical-align: middle;
+  position: relative;
+
+}
+
+
+select,
+input[type=text] {
+  width:300px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 2px solid #9fc7c0;
+  font-color: #666;
+  font-size: 15px;
+}
+
+
+.btn {
+  padding: 10px;
+  margin: 20px 0 0 0;
+}
+
+
+
+
+footer {
+  border-top: 3px solid rgb(181, 181, 181);
+  background-color: rgb(58, 58, 58);
+}
+
+.my-auto {
+  padding: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+
+
+
+
+.table-sm th, .table-sm td {
+  padding: 0.3rem;
+}
+.table th, .table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #e3e6f0;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#message {
+  padding: 20px;
+  color: #ac0000;
+}
